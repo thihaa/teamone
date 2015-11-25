@@ -1,0 +1,381 @@
+
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Week 7 &middot; COMP1950
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/lanyon.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,700">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+<script type="text/javascript" src="http://gc.kis.scr.kaspersky-labs.com/1B74BD89-2A22-4B93-B451-1C9E1052A0EC/main.js" charset="UTF-8"></script></head>
+
+
+  <body class="theme-base-0d">
+
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p>More about Web Stuff from BCIT</p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item" href="/">Home</a>
+
+    
+
+    
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/about/">About</a>
+        
+      
+    
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/outline/">Outline</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/project/">Project</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/project/answers/">Project Answers</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/studentpages/">Student Pages</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/week01/">Week 1</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/week02/">Week 2</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/week03/">Week 3</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/week03/positioning/">Week 3 Exercise B</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/week03/printstylesheets/">Week 3 Exercise A</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/week04/">Week 4</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/week05/">Week 5</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/week06/">Week 6</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item active" href="/week07/">Week 7</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/week08/">Week 8</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/week09/">Week 9</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/week10/">Week 10</a>
+        
+      
+    
+
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      &copy; 2015. All rights reserved.
+    </p>
+  </div>
+</div>
+
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/" title="Home">COMP1950</a>
+            <small>Web Development Level 2</small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+        <div class="page">
+  <h1 class="page-title">Week 7</h1>
+  <h2 id="agenda">Agenda</h2>
+
+<ul>
+  <li>Homework Review</li>
+  <li>Template Final</li>
+  <li>Introduction to jQuery</li>
+  <li>Homework</li>
+</ul>
+
+<p>Let’s take a last look at template development and how we can get as much out of the CMS as possible. We will look at managing files from within Tumblr and be sure we understand the grid system we used earlier for layout.</p>
+
+<p>Later we will look at jQuery, what it is and how we can use it.</p>
+
+<h2 id="homework-review">Homework Review</h2>
+
+<p>We started with HTML, then CSS, learned about SSIs, including Query Strings, then moved on to merging all of those technologies and concepts together to create a template.</p>
+
+<p>Your templates now have the ability to call content from a database and present it almost any way you want with additional metadata showing up for individual posts or pages all the way up to complete changes to templates based on user interaction.</p>
+
+<p>What things worked?  What things didn’t?  What are your challenges and successes?</p>
+
+<h2 id="template-final">Template Final</h2>
+
+<p>The main thing I want to share is the Asset Management part of Tumblr which is similar for all Content Management Systems.</p>
+
+<p>Instead of managing files on external servers or embedding scripts and CSS in your HTML, you can use asset management to make it a lot easier.</p>
+
+<p>Benefits are:</p>
+
+<ul>
+  <li>Reusable code (familiar for CSS and script files anyway)</li>
+  <li>Cached for faster access</li>
+  <li>Can also utilize minified and gzipped content for even faster load times</li>
+</ul>
+
+<h3 id="exercise">Exercise</h3>
+
+<p>Use the asset management tool to manage a reset script, the grid, and your own CSS</p>
+
+<h2 id="javascript--jquery">Javascript &amp; jQuery</h2>
+
+<p>jQuery is a Javascript Framework that has become almost ubiquitous in front end development.  After starting as a last-minute coding exercise by a Netscape employee, it is now the <a href="https://redmonk.com/sogrady/2015/07/01/language-rankings-6-15/">most commonly used programming language in the world</a>.</p>
+
+<p>However, as a scripting language, it is sometimes as much art as it is science.</p>
+
+<h3 id="what-is-javascript">What is JavaScript?</h3>
+
+<p>From Wikipedia:</p>
+
+<blockquote>
+  <p>JavaScript is a scripting language most often used for client-side web development. JavaScript was influenced by many languages and was designed to have a similar look to Java, but be easier for non-programmers to work with.</p>
+</blockquote>
+
+<h3 id="javascript-is-easy---right">JavaScript is easy - right?</h3>
+<p>For many web developers, JavaScript is <em>another</em> language that they need to learn, one that isn’t as straightforward as the markup and presentation of HTML and CSS.</p>
+
+<p>Many people simply steal and re-use rather than coding their own. Javascript was also a language that was poorly supported for years, adding to the difficulty.</p>
+
+<h3 id="other-libraries--frameworks">Other Libraries &amp; Frameworks</h3>
+
+<ul>
+  <li><a href="http://prototypejs.org/">Prototype</a> - one of the first libraries, still very good</li>
+  <li><a href="http://script.aculo.us/">script.aculo.us</a> - One of the best effects libraries, uses Prototype Lirary</li>
+  <li><a href="http://mootools.net/">Mootools</a> - a more recent player with some excellent UI effects</li>
+</ul>
+
+<h3 id="jquery">jQuery</h3>
+
+<ul>
+  <li>jQuery is a JavaScript Library</li>
+  <li>Designed especially for making JS manipulations easier</li>
+  <li>Fairly small footprint (smaller than an average image)</li>
+  <li>Gives access to any DOM element</li>
+  <li>If you can access the element from CSS (level 1-3), you can access it from jQuery</li>
+  <li>Very little requirement to change any HTML</li>
+  <li>Syntax is a little scary at first, but easy to pick up</li>
+  <li>The main reason I chose it for this course - simpler syntax, full CSS accessibility</li>
+</ul>
+
+<p>jQuery Requirements</p>
+
+<ul>
+  <li>Inclusion of the jQuery code in your HTML:</li>
+  <li>Download from jQuery</li>
+  <li>Three main forms:</li>
+  <li>Uncompressed - best for reviewing the code</li>
+  <li>Packed - most often used for production systems</li>
+  <li>Minified - used for systems with Unix backend (requires GZip)</li>
+  <li>Or, can be done directly from jQuery</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"http://code.jquery.com/jquery-latest.js"</span><span class="nt">&gt;</span> <span class="nt">&lt;/script&gt;</span></code></pre></figure>
+
+<ul>
+  <li>Need to include your own code either as an embedded block or linked to an external file</li>
+  <li>Basic functions are very easy to write</li>
+  <li>Works in almost all browsers (including IE6! - Mostly)</li>
+</ul>
+
+<p>Using the Console &amp; jQuerify</p>
+
+<p>One of the ways you can test how jQuery will work on a page (or, more importantly, if a selector will work) is to have jQuery on a page and use the Developer Console to pass requests in.</p>
+
+<p>This works best on Firefox or Chrome (I will use Firefox).</p>
+
+<p>You will need to create a bookmarklet from <a href="http://www.learningjquery.com/2009/04/better-stronger-safer-jquerify-bookmarklet">jQuerify</a>, which is used to insert jQuery to a page that might not already have it.  It also works as a great tool for identifying <em>what version</em> of jQuery is currently being used.</p>
+
+<h3 id="exercise-1">Exercise</h3>
+
+<p>We will go over some of the options on the Console and how we can utilize jQuery (via jQuerify) to manipulate objects on the page as we test for how we would do it on a live site.</p>
+
+<h3 id="creating-a-standalone-example">Creating a standalone example</h3>
+
+<p>Let’s create a basic example where we are able to click links to show, hide or toggle content on the page.</p>
+
+<p>Create a basic html page with the following:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+	<span class="nt">&lt;title&gt;</span>jQuery Example<span class="nt">&lt;/title&gt;</span>
+	<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">""</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"examples"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;ul&gt;</span>
+   <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Hide<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+   <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Show<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+   <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Toggle<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"content"</span><span class="nt">&gt;</span>	
+	<span class="nt">&lt;h1&gt;</span>Site Content<span class="nt">&lt;/h1&gt;</span>
+	<span class="nt">&lt;p&gt;</span>This could be any content that you might want to hide, show, toggle or otherwise manipulate with jQuery<span class="nt">&lt;/p&gt;</span>
+	<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"tags"</span><span class="nt">&gt;</span>You might just want to hide a portion of the content, like this tags area<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span></code></pre></figure>
+
+<p>Taking this page and adding jQuery to it (either directly in the <script> tag or with jQuerify), select some of the elements as we did in the previous example and manipulate them.</script></p>
+
+<h3 id="writing-functions">Writing functions</h3>
+
+<p>Instead of playing on the console, let’s write some code that will enable our links to work.</p>
+
+<p>Your page should:</p>
+
+<ul>
+  <li>Source jQuery</li>
+  <li>Have functions that show, hide, toggle content</li>
+  <li>Use CSS-style selectors to grab the appropriate content for your behaviour</li>
+</ul>
+
+<h2 id="bringing-it-all-together">Bringing it all together</h2>
+
+<p>Looking at the work we have done so far in the course and what we have learned today, you will be:</p>
+
+<ul>
+  <li>Adding a recent build of jQuery to the asset management of Tumblr</li>
+  <li>Sourcing that file for your template</li>
+  <li>Writing a function that will toggle the display of the page navigation</li>
+  <li>Additionally you could write a function that toggles the display of tags on individual posts</li>
+</ul>
+
+</div>
+
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script>
+      (function(document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+
+        document.addEventListener('click', function(e) {
+          var target = e.target;
+
+          if(!checkbox.checked ||
+             sidebar.contains(target) ||
+             (target === checkbox || target === toggle)) return;
+
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
+  </body>
+</html>

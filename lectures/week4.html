@@ -1,0 +1,403 @@
+
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Week 4 &middot; COMP1950
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/lanyon.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,700">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+<script type="text/javascript" src="http://gc.kis.scr.kaspersky-labs.com/1B74BD89-2A22-4B93-B451-1C9E1052A0EC/main.js" charset="UTF-8"></script></head>
+
+
+  <body class="theme-base-0d">
+
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p>More about Web Stuff from BCIT</p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item" href="/">Home</a>
+
+    
+
+    
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/about/">About</a>
+        
+      
+    
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/outline/">Outline</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/project/">Project</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/project/answers/">Project Answers</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/studentpages/">Student Pages</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/week01/">Week 1</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/week02/">Week 2</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/week03/">Week 3</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/week03/positioning/">Week 3 Exercise B</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/week03/printstylesheets/">Week 3 Exercise A</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item active" href="/week04/">Week 4</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/week05/">Week 5</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/week06/">Week 6</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/week07/">Week 7</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/week08/">Week 8</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/week09/">Week 9</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/week10/">Week 10</a>
+        
+      
+    
+
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      &copy; 2015. All rights reserved.
+    </p>
+  </div>
+</div>
+
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/" title="Home">COMP1950</a>
+            <small>Web Development Level 2</small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+        <div class="page">
+  <h1 class="page-title">Week 4</h1>
+  <h2 id="agenda">Agenda</h2>
+
+<ul>
+  <li>Test</li>
+  <li>Homework Review</li>
+  <li>Responsive</li>
+  <li>Server Side Includes</li>
+</ul>
+
+<h3 id="test">Test</h3>
+
+<p>A test on the first 3 weeks - I’ll give you 30 minutes. You may not need it.</p>
+
+<h3 id="responsive">Responsive</h3>
+
+<p>Design for mobile first - most basic styles are applied like fonts, colors, links, anything else you want to see across all screen sizes.</p>
+
+<p>Any other styles are added into media queries as enhancements for larger screen sizes.</p>
+
+<p>Biggest advantage: Smaller devices only load the CSS they need, and nothing they don’t.</p>
+
+<p>Conversely, if you create a complex layout as the default and then write media queries which overwite those complex styles for smaller devices, then this is the process for smaller devices:</p>
+
+<ul>
+  <li>Download all the CSS</li>
+  <li>Attempt to provisionally paint the screen with default styles</li>
+  <li>Calculate styles for local device width</li>
+  <li>Re-paint screen for smaller devices</li>
+</ul>
+
+<p>This is a lot of work for sometimes underpowered CPUs on mobile devices.</p>
+
+<p>Then design for bigger screens and ADD styles from there.</p>
+
+<h3 id="using-a-grid">Using a grid</h3>
+
+<p>Today, we are going to use a grid I have adapted.</p>
+
+<p>The grid we have used is taken directly from Skeleton, but greatly simplified.  You can get a copy of Skeleton and try it for yourself.</p>
+
+<p>Copy the <a href="grid.css">grid code</a> and be prepared to use it on your site.</p>
+
+<p>Some of the things I like about Skeleton:</p>
+
+<ul>
+  <li>Basic syntax</li>
+  <li>Very small filesize</li>
+  <li>Easy to customize</li>
+  <li>Mobile-first design</li>
+</ul>
+
+<p>This will be a hands-on lecture for people to get comfortable with this system.</p>
+
+<p>We will be doint the following:</p>
+
+<ul>
+  <li>Observe the grid using borders</li>
+  <li>Collapse the grid to see behavior</li>
+  <li>Work with rows and columns</li>
+  <li>Add changes at different widths with media queries</li>
+</ul>
+
+<h2 id="server-side-includes---ssi">Server Side Includes - SSI</h2>
+
+<p>A server function that allows for real-time echoing of information to the browser such as:</p>
+
+<ul>
+  <li>Time</li>
+  <li>Date</li>
+  <li>file information</li>
+  <li>conditional execution of documents</li>
+  <li>even sending an e-mail</li>
+</ul>
+
+<h3 id="how-do-they-work">How do they work?</h3>
+
+<ul>
+  <li>A series of characters <strong>(called tokens)</strong> are included in your HTML</li>
+  <li>As page is processed by the HTTP server, any tokens are sent to the SSI engine</li>
+  <li>The processed result is then either output as HTML, or some server side function is instantiated.</li>
+</ul>
+
+<p>SSIs are used extensively today, and are used in other languages like PHP, Pyton and Java.  SSIs can be a powerful tool for web development:</p>
+
+<ul>
+  <li>Further lightens your code. A small SSI statement can take the place of a large, re-used codeblock</li>
+  <li>This can save giant amounts of code footprint on your site!</li>
+  <li>Code changes made easy. If you have your navigation built into an SSI, you can make 1 change and all pages that subscribe to that SSI will change.</li>
+  <li>Execute script and applications within HTML. If you need to have live data on your site, you can write a mini-application that will execute each time you deliver a page. BCIT’s navigation system runs on this.</li>
+</ul>
+
+<h3 id="what-do-they-look-like">What do they look like?</h3>
+
+<p>Each SSI Token has the following 4 pieces:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"> 	<span class="c">&lt;!--# {ACTION} {ATTRIBUTE}={VALUE} --&gt;</span></code></pre></figure>
+
+<p>{ACTION} is one of the following actions:</p>
+
+<ul>
+  <li>echo</li>
+  <li>include</li>
+  <li>fsize</li>
+  <li>flastmod</li>
+  <li>exec</li>
+  <li>config</li>
+  <li>odbc</li>
+  <li>email</li>
+  <li>if</li>
+  <li>goto</li>
+  <li>label</li>
+  <li>break</li>
+</ul>
+
+<p>{ATTRIBUTE} and {VALUE} can be any number of things defined by the action you are taking.</p>
+
+<p>Each tag has a different set of valid attributes and variables</p>
+
+<h3 id="example">Example</h3>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"> 	<span class="c">&lt;!--# echo var="DATE_LOCAL" --&gt;</span></code></pre></figure>
+
+<p>That code, in your HTML and processed by the SSI module on a web server will grab the local date and insert it into your HTML before sending it to your browser.</p>
+
+<h3 id="what-are-the-most-common">What are the most common?</h3>
+
+<p>The ECHO tag is one of the most common, allowing you to include a wide variety of document information:</p>
+
+<ul>
+  <li>DOCUMENT_NAME: The current filename.</li>
+  <li>DOCUMENT_URI: The virtual path to this document (such as /docs/tutorials/foo.shtml).</li>
+  <li>DATE_LOCAL: The current date, local time zone. Subject to the timefmt parameter to the config command.</li>
+  <li>DATE_GMT: Same as DATE_LOCAL but in Greenwich mean time.</li>
+  <li>LAST_MODIFIED: The last modification date of the current document. Subject to timefmt like the others.</li>
+  <li>The EXEC tag allows you to execute code (such as PHP or PERL) while the HTML itself is being processed.</li>
+  <li>The INCLUDE tag is likely the most common. It allows you to include documents or document fragments right in your HTML. This is what we will be doing today.</li>
+</ul>
+
+<h3 id="are-there-any-requirements">Are there any requirements?</h3>
+
+<p>Yes! There are a few:</p>
+
+<ul>
+  <li>Your server must have the SSI module activated (there are SSI modules for almost every web server in existence)</li>
+  <li>Sometimes you may need to use a different extension on your HTML (usually SHTML) so that the server will understand that it needs to process embedded SSIs</li>
+</ul>
+
+<h3 id="best-practices">Best practices</h3>
+
+<ul>
+  <li>Comment your SSIs in your code so that you know wherre they are supposed to be (especially if they don’t work!)</li>
+  <li>Place all SSIs in a single location with a common extension that is <em>not</em> HTML. This is so that you know what they are and what they are used for</li>
+  <li>Additionally, putting them in their own directory (like: /inc) helps: easier to find and always in a “known” spot</li>
+  <li>Common usage: /inc/date.inc or /inc/nav.inc</li>
+</ul>
+
+<h3 id="resources">Resources</h3>
+
+<p>Lots more detail available a the <a href="http://httpd.apache.org/docs/howto/ssi.html">Apache Server Side Include docs page</a></p>
+
+<h2 id="ssi-exercise">SSI Exercise</h2>
+
+<p>We will start by removing your footer and replacing it with an include.</p>
+
+<ul>
+  <li>Cut the footer code from your brewery site</li>
+  <li>Paste it into it’s own file, call it footer.inc</li>
+  <li>Use SSIs to put this code into your brewery pages</li>
+</ul>
+
+<p>You will have code that looks something like:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">	<span class="c">&lt;!--#include file="footer.inc" --&gt;</span></code></pre></figure>
+
+<h3 id="exercise-2-date">Exercise 2: Date</h3>
+
+<p>I’d like you to use SSIs on your Beer Home page, to display the following:</p>
+
+<blockquote>
+  <p>Welcome! Today is Tuesday, October 6th, 2015.</p>
+</blockquote>
+
+<p>This should be accurate to our current date. Use SSIs to get the DATE_LOCAL and configure it so that you will see the date <em>exactly</em> as shown above. The style can look different, but the format of the date should be the same.</p>
+
+<p>You will be using the <strong>echo</strong> and <strong>config</strong> actions.  Here is <a href="http://www.htmlite.com/SSI005.shtml">relevant information on config</a>.</p>
+
+
+</div>
+
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script>
+      (function(document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+
+        document.addEventListener('click', function(e) {
+          var target = e.target;
+
+          if(!checkbox.checked ||
+             sidebar.contains(target) ||
+             (target === checkbox || target === toggle)) return;
+
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
+  </body>
+</html>

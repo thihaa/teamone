@@ -1,0 +1,361 @@
+
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Week 5 &middot; COMP1950
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/lanyon.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,700">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+<script type="text/javascript" src="http://gc.kis.scr.kaspersky-labs.com/1B74BD89-2A22-4B93-B451-1C9E1052A0EC/main.js" charset="UTF-8"></script></head>
+
+
+  <body class="theme-base-0d">
+
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p>More about Web Stuff from BCIT</p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item" href="/">Home</a>
+
+    
+
+    
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/about/">About</a>
+        
+      
+    
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/outline/">Outline</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/project/">Project</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/project/answers/">Project Answers</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/studentpages/">Student Pages</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/week01/">Week 1</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/week02/">Week 2</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/week03/">Week 3</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/week03/positioning/">Week 3 Exercise B</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/week03/printstylesheets/">Week 3 Exercise A</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/week04/">Week 4</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item active" href="/week05/">Week 5</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/week06/">Week 6</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/week07/">Week 7</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/week08/">Week 8</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/week09/">Week 9</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/week10/">Week 10</a>
+        
+      
+    
+
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      &copy; 2015. All rights reserved.
+    </p>
+  </div>
+</div>
+
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/" title="Home">COMP1950</a>
+            <small>Web Development Level 2</small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+        <div class="page">
+  <h1 class="page-title">Week 5</h1>
+  <h2 id="agenda">Agenda</h2>
+
+<ul>
+  <li>Homework Review</li>
+  <li>SSI Continued</li>
+  <li>Gallery Exercise</li>
+  <li>Get started on Templates</li>
+  <li>Homework</li>
+</ul>
+
+<p>Homework review has been delayed but I’m back on track. We have lots of hands-on work, so I can take some time to help anyone with issues today.</p>
+
+<h2 id="ssi-continued">SSI Continued</h2>
+
+<p>Reminders about SSIs:</p>
+
+<ul>
+  <li>You need to use the *.shtml file extension (on this server) for your SSIs to work</li>
+  <li>You can only inlcude files from the current directory or subdirectories. In order to traverse to a parent directory, you must use: include virtual=”<em>filename</em>”</li>
+  <li>They are included on the <em>server</em> side. That means your browser only ever sees the <em>results</em> of the server included content.</li>
+  <li>What your pages look like on the server and what they look like on the client are different. That’s on purpose.</li>
+  <li>The basis for template development. Content can change on you, so you’ll need to adapt to that changing content</li>
+</ul>
+
+<h2 id="ssi-exercise-gallery">SSI Exercise: Gallery</h2>
+
+<p>This is an exercise that will demonstrate how you can get content from the server and allow the user to populate that content by selecting what they want to see.</p>
+
+<p>Basically this is a poor-person’s Image Gallery, but it uses a Query String that tells the SSI to select a particular image.</p>
+
+<h3 id="ssi-query-string-gallery">SSI Query String Gallery</h3>
+
+<p>Using Server Side Includes (SSIs) and a Query String, you will create a gallery that exists as a single HTML page that will load a different image based on what is called in the Query String.</p>
+
+<p>Build a new page on to add to your Brewery site that is called “gallery” and then select (at least) 3 images that are all approximately the same size.</p>
+
+<p>You will create a menu that links to each of the images, or, if you are able to, find some thumbnails or icons.</p>
+
+<h4 id="requirements">Requirements</h4>
+
+<p>In order to do this correctly, you will need:</p>
+
+<ul>
+  <li>a server that supports SSIs. Most modern Web Servers have this, including the most common: Apache, Windows, Apple, IBM, etc.</li>
+  <li>HTML files will need to be processed by the SSI sub-system. Most of the time, this means saving them as *.shtml</li>
+  <li>You will need to have images that all have the same extension, such as JPG or GIF.</li>
+  <li>Not absolutely required, but thumbnail images for the user to click on would be useful. However, can be done with text links as well.</li>
+</ul>
+
+<h4 id="how-to-create-the-gallery">How to create the Gallery</h4>
+
+<p>Make sure all of your images are located in the same directory, and have “appropriate” names. This means: no capital letters, no spaces, no special characters.</p>
+
+<p>Here are some acceptable examples:</p>
+
+<ul>
+  <li>image01.jpg</li>
+  <li>birthday_boy.jpg</li>
+  <li>sunshine.jpg</li>
+  <li>beer_ipa.jpg</li>
+</ul>
+
+<p>Create the page you want the images to appear on. Example: gallery.shtml</p>
+
+<p>In order to call a sepecific image, you will need to “pass” some data to the SSI engine in the URL. This is done by appending a question mark and the name of your image (without the extension) to the URL.</p>
+
+<blockquote>
+  <p>gallery.shtml?sunshine</p>
+</blockquote>
+
+<p>The Query String in the previous example is now: <em>sunshine</em></p>
+
+<p>So long as the image name is actually: sunshine.jpg, and the file is located in the images directory (as an example), the following tag should display the image:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"images/&lt;!--#echo var="</span><span class="na">QUERY_STRING</span><span class="err">"</span><span class="na">--</span><span class="nt">&gt;</span>.jpg" &gt;</code></pre></figure>
+
+<p>Creating links to images is a matter of building each HREF with the appropriate Query String inside of it:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"gallery.shtml?sunshine"</span><span class="nt">&gt;</span>Click here to see the sun!<span class="nt">&lt;/a&gt;</span></code></pre></figure>
+
+<p>This last example code will load the current page (gallery.shtml) with the Query String of sunshine. Now, the following image tag:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"images/&lt;!--#echo var="</span><span class="na">QUERY_STRING</span><span class="err">"</span><span class="na">--</span><span class="nt">&gt;</span>.jpg" &gt;</code></pre></figure>
+
+<p>will load the sunshine.jpg image.</p>
+
+<h3 id="go-for-it">Go for it</h3>
+
+<p>Using these instructions, create the gallery page, and be sure that all links to images are to the same page (self-linking, for instance, gallery.shtml)</p>
+
+<h4 id="extra-credit">Extra credit</h4>
+
+<p>Can you figure out how to make this work using a default image?</p>
+
+<h2 id="template-development">Template Development</h2>
+
+<p>While the <em>concept</em> is identical (The ability to merge HTML, CSS and Syntax together), the <em>implementation</em> is totally different: template development in a Content Management System.</p>
+
+<p><strong>By far the most common type of web development work done today</strong>: customizing templates or writing them from scratch</p>
+
+<p>There are an incredible number of different languages and tools for developing templates, with <strong>Wordpress</strong> and <strong>Drupal</strong> being the most well known.</p>
+
+<p>One common principle: <em>inserting content into HTML</em></p>
+
+<p>The concept on how it works is exactly like SSI: combining content from a server-side source before delivering documents to User Agents.</p>
+
+<h3 id="how-do-they-work">How do they work?</h3>
+
+<p>At their simplest, any CMS architecture will take content provided by the user (Generally a title and some content) and push it to a web space. Using templates, CMS software will take the content entered by the user, and insert it into the HTML where there are tags responsible for certain bits of information such as date, author, title, content, product name, cost, image and many other possibilities.</p>
+
+<p>For example, the title of a page using Tumblr can be inserted using the following tag:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">{Title}</code></pre></figure>
+
+<p>The {Title} tag is a proprietary syntax that tells the CMS on the backend to go find the title and insert it in the HTML</p>
+
+<p>The title is a monatomic tag (meaning there is only an “opening” and not a closing tag to go with it}, as it simply represents a variable that the CMS will keep track of.</p>
+
+<p>Other tags work like HTML, enclosing information, such as:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">{block:Description}
+	<span class="nt">&lt;p</span> <span class="na">id=</span><span class="s">"description"</span><span class="nt">&gt;</span>{Description}<span class="nt">&lt;/p&gt;</span>
+{/block:Description}	</code></pre></figure>
+
+<p>You can see that there is the CMS-specific {block} tag with an attribute of Description. That indicates that the content inside the tag will be related to the description as entered by the author. Also notable is the inclusion of regular HTML inside the Tumblr tags - exactly like our SSI exercises.</p>
+
+<p>Once your template has been created, the CMS will scan your template for tags that indicate where data should be inserted. The application will then insert all of the relevant data and publish to completed HTML page to the specified server. The process works exactly like Server Side Includes, but the result resides on the web server (instead of in a browser window). This is an advantage, as further server processing can be done when a page is actually requested by a user.</p>
+
+<h3 id="lets-get-started">Let’s get started!</h3>
+
+<p>Everyone will create a Template using Tumblr as our Content Management System.</p>
+
+<p>We will follow these steps:</p>
+
+<ul>
+  <li>Create an account (you should already have done this)</li>
+  <li>Choose a basic, pre-created theme (template)</li>
+  <li>Write some content</li>
+  <li>Publish the content and see how it looks</li>
+  <li>Examine the template</li>
+  <li>Create our own template</li>
+</ul>
+
+<p>There is a LOT of hands-on for this, and I will be demonstrating a LOT, so be ready!</p>
+
+</div>
+
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script>
+      (function(document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+
+        document.addEventListener('click', function(e) {
+          var target = e.target;
+
+          if(!checkbox.checked ||
+             sidebar.contains(target) ||
+             (target === checkbox || target === toggle)) return;
+
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
+  </body>
+</html>
